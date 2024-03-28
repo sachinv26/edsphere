@@ -44,7 +44,7 @@ class MainPage extends StatelessWidget {
   Widget _buildCurrentPage(AuthenticationAuthenticatedState state) {
     switch (state.currentPage) {
       case CurrentPage.home:
-        return HomePage();
+        return LoginPage();
       case CurrentPage.payFees:
         return ProfilePage();
       case CurrentPage.settings:
@@ -52,7 +52,7 @@ class MainPage extends StatelessWidget {
       case CurrentPage.chat:
         return ChatPage();
       default:
-        return HomePage(); // Default to the home page
+        return LoginPage(); // Default to the home page
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "547772147404",
+    "project_id": "edsphere-48ccf",
+    "storage_bucket": "edsphere-48ccf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547772147404:android:882fc918bd071012e50469",
+        "android_client_info": {
+          "package_name": "com.shubhsoftsolution.schoolapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz_SkUKG-bqN_98DhILoIbZ8qLkYc21Gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

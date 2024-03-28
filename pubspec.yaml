@@ -20,6 +20,9 @@ dependencies:
   connectivity: ^3.0.6
   flutter_cached_pdfview: ^0.4.2
   intl: ^0.18.1
+  firebase_core: ^2.27.0
+  cloud_firestore: ^4.15.8
+  firebase_auth: ^4.17.8
 dev_dependencies:
   flutter_test:
     sdk: flutter

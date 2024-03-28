@@ -1,31 +1,38 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:schoolapp/core/utils/size_utils.dart';
 import 'package:schoolapp/data/apiClient/getbirthdays.dart';
-import 'package:schoolapp/data/apiClient/getevents.dart';
 import 'package:schoolapp/data/apiClient/getfee.dart';
 import 'package:schoolapp/screens/birthday_page.dart';
 import 'package:schoolapp/screens/homework_page.dart';
 import 'package:schoolapp/screens/marksscreen.dart';
-import 'package:schoolapp/screens/notification_page.dart';
 import 'package:schoolapp/screens/event_page.dart';
 import 'package:schoolapp/screens/mainfees.dart';
 import 'package:schoolapp/screens/profile_page.dart';
 import 'package:schoolapp/screens/study_material.dart';
-import 'package:schoolapp/screens/webviewscreen.dart';
-import 'package:http/http.dart' as http;
 import 'package:schoolapp/screens/yearly_attendance.dart';
-import 'package:schoolapp/services/loginpage.dart';
 import 'package:schoolapp/theme/app_decoration.dart';
 import 'package:schoolapp/theme/custom_text_style.dart';
-import 'package:schoolapp/data/apiClient/getstudent.dart';
 import 'package:schoolapp/data/models/student_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/theme_helper.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'dart:convert';
 
 class HomePage extends StatefulWidget {
+
+  final String name;
+  final String fname;
+  final String mname;
+  final String classs;
+  final String address;
+  final String number;
+  final String admissionDate;
+  final String admissionNo;
+  final String dob;
+  final String email;
+  final String gender;
+
+  const HomePage({Key? key, required this.name, required this.fname, required this.mname, required this.classs, required this.address, required this.number, required this.admissionDate, required this.admissionNo, required this.dob, required this.email, required this.gender}) : super(key: key);
+
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -415,7 +422,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Sachin Verma',
+                              widget.name,
                               style: CustomTextStyles.titleMediumBold,
                             ),
                             SizedBox(height: 5.v),
@@ -428,7 +435,7 @@ class _HomePageState extends State<HomePage> {
                                 Padding(
                                   padding: EdgeInsets.only(left: 2.h),
                                   child: Text(
-                                    'XYZ',
+                                    widget.fname,
                                     style: theme.textTheme.bodySmall,
                                   ),
                                 ),
@@ -441,7 +448,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Text(
                                     'Class- ' +
-                                        '2' +
+                                        widget.classs +
                                         "Section- " +
                                         'A',
                                     style: CustomTextStyles.labelLargeMedium,
